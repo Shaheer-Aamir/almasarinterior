@@ -24,7 +24,7 @@
   --background-color: #f9fafb; /* Background color for the entire website, including individual sections */
   --default-color: #333333; /* Default color used for the majority of the text content across the entire website */
   --heading-color: #102a49; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #14529d; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --accent-color: #C69F71; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
@@ -146,7 +146,7 @@ h6 {
 # Global Header
 --------------------------------------------------------------*/
 .header {
-  --background-color: #ffffff;
+  --background-color: #0e131c;
   color: var(--default-color);
   transition: all 0.5s;
   z-index: 997;
@@ -154,7 +154,7 @@ h6 {
 }
 
 .header .topbar {
-  background-color: var(--background-color);
+  background-color: #C69F71;
   height: 40px;
   padding: 0;
   font-size: 14px;
@@ -211,8 +211,7 @@ h6 {
 }
 
 .header .logo img {
-  max-height: 70px;
-  margin-right: 8px;
+  max-height: 100px;
 }
 
 .header .logo h1 {
@@ -255,7 +254,7 @@ h6 {
 
   .navmenu a,
   .navmenu a:focus {
-    color: var(--nav-color);
+    color: #C69F71;
     padding: 18px 15px;
     font-size: 16px;
     font-family: var(--nav-font);
@@ -282,7 +281,7 @@ h6 {
   .navmenu li:hover>a,
   .navmenu .active,
   .navmenu .active:focus {
-    color: var(--nav-hover-color);
+    color: #C69F71;
   }
 
   .navmenu .dropdown ul {
@@ -468,13 +467,71 @@ h6 {
     display: block;
   }
 }
+/*--------------------------------------------------------------
+# Branding & Centered Nav
+--------------------------------------------------------------*/
+.header .branding {
+  min-height: 100px; /* Increased slightly for better spacing with button */
+  padding: 15px 0;
+  background-color: var(--background-color);
+}
 
+.header .branding .container {
+  width: 100%;
+}
+
+/* Center the nav links horizontally */
+.navmenu {
+  flex: 0 1 auto;
+}
+
+/* Pill-shaped Get A Quote button – Desktop */
+.get-quote-btn {
+  background-color: #C69F71;
+  color: #fff;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 10px 28px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  margin-left: 20px; /* spacing from nav */
+}
+
+.get-quote-btn:hover {
+  background-color: #d4b08a;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 15px rgba(198, 159, 113, 0.3);
+}
+
+/* Optional: Mobile version of the button (appears below logo when menu is closed) */
+.get-quote-btn-mobile {
+  background-color: #C69F71;
+  color: #fff;
+  font-size: 14px;
+  padding: 8px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  margin-left: 10px;
+}
+
+/* Adjust logo margin when button is present */
+.header .logo {
+  margin-right: 0;
+}
+
+/* When page is scrolled – keep button visible */
+.scrolled .header .branding {
+  min-height: 80px;
+  padding: 10px 0;
+}
 /*--------------------------------------------------------------
 # Global Footer
 --------------------------------------------------------------*/
 .footer {
   color: var(--default-color);
-  background-color: var(--background-color);
+  background-color: #0e131c;
   font-size: 14px;
   padding-bottom: 50px;
   position: relative;
@@ -491,7 +548,7 @@ h6 {
 }
 
 .footer .footer-about .logo img {
-  max-height: 40px;
+  max-height: 120px;
   margin-right: 6px;
 }
 
@@ -756,6 +813,7 @@ section,
   font-size: 16px;
   font-weight: 500;
   font-family: var(--heading-font);
+  margin-top: 5px;
 }
 
 /*--------------------------------------------------------------
@@ -775,20 +833,40 @@ section,
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("../img/construction/showcase-5.webp");
+  background-image: url("../img/construction/SSygDJmMSlifQT5ESfUwYA.webp");
   background-size: cover;
-  background-position: center;
-  opacity: 0.05;
+  background-position: center center;
+  opacity: 1;
   z-index: 0;
+}
+
+/* New: Slight dark overlay */
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(14, 19, 28, 0.5); /* Dark overlay using your --background-color (#0e131c) at 50% opacity */
+  z-index: 1;
+}
+
+/* Ensure hero content (text, buttons, etc.) appears above the overlay */
+.hero > * {
+  position: relative;
+  z-index: 2;
 }
 
 .hero .container {
   position: relative;
-  z-index: 1;
+  z-index: 99;
 }
 
 .hero .hero-content {
   margin-bottom: 30px;
+  z-index: 99999;
+  text-align: center;
 }
 
 .hero .hero-content .subtitle {
@@ -796,7 +874,7 @@ section,
   font-weight: 600;
   font-size: 14px;
   text-transform: uppercase;
-  color: var(--accent-color);
+  color: #fff;
   margin-bottom: 15px;
   letter-spacing: 1px;
   position: relative;
@@ -819,6 +897,7 @@ section,
   font-weight: 700;
   margin-bottom: 20px;
   line-height: 1.2;
+  color: #fff;
 }
 
 @media (max-width: 992px) {
@@ -836,19 +915,31 @@ section,
 .hero .hero-content p {
   font-size: 18px;
   margin-bottom: 30px;
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  color: #fff;
 }
 
 .hero .hero-buttons {
   display: flex;
   gap: 15px;
   margin-bottom: 40px;
+  justify-content: center;
 }
 
 @media (max-width: 576px) {
   .hero .hero-buttons {
-    flex-direction: column;
+    flex-direction: row;
     gap: 10px;
+  }
+  .hero .hero-content p {
+  font-size: 14px;
+  }
+  .hero .hero-buttons .btn-primary{
+    padding: 15px 18px;
+    font-size: 14px;
+  }
+  .hero .hero-buttons .btn-secondary{
+    padding: 15px 18px;
+    font-size: 14px;
   }
 }
 
@@ -860,6 +951,7 @@ section,
   border-radius: 4px;
   font-weight: 600;
   transition: all 0.3s ease;
+  border-radius: 24px;
 }
 
 .hero .hero-buttons .btn-primary:hover {
@@ -872,8 +964,9 @@ section,
   display: inline-block;
   padding: 14px 32px;
   background-color: transparent;
-  color: var(--default-color);
-  border: 1px solid color-mix(in srgb, var(--default-color), transparent 70%);
+  border-radius: 24px !important;
+  color: #fff;
+  border: 1px solid #fff;
   border-radius: 4px;
   font-weight: 600;
   transition: all 0.3s ease;
@@ -881,7 +974,7 @@ section,
 
 .hero .hero-buttons .btn-secondary:hover {
   background-color: color-mix(in srgb, var(--default-color), transparent 95%);
-  border-color: var(--default-color);
+  border-color: #fff;
   transform: translateY(-3px);
 }
 
@@ -1062,7 +1155,7 @@ section,
   color: var(--contrast-color);
   padding: 0.75rem 1.5rem;
   font-weight: 500;
-  border-radius: 4px;
+  border-radius: 24px;
   transition: all 0.3s ease;
 }
 
