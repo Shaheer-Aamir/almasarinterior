@@ -1,10 +1,3 @@
-/**
-* Template Name: Constructo
-* Template URL: https://bootstrapmade.com/constructo-bootstrap-construction-template/
-* Updated: Aug 30 2025 with Bootstrap v5.3.8
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
 
 @charset "UTF-8";
 
@@ -23,8 +16,8 @@
 :root { 
   --background-color: #f9fafb; /* Background color for the entire website, including individual sections */
   --default-color: #333333; /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #102a49; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #C69F71; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --heading-color: #000; /* Color for headings, subheadings and title throughout the website */
+  --accent-color: #000; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
@@ -32,7 +25,7 @@
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
   --nav-color: #333333;  /* The default color of the main navmenu links */
-  --nav-hover-color: #14529d; /* Applied to main navmenu links when they are hovered over or active */
+  --nav-hover-color: #000; /* Applied to main navmenu links when they are hovered over or active */
   --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
   --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
   --nav-dropdown-color: #333333; /* Used for navigation links of the dropdown items in the navigation menu. */
@@ -146,7 +139,7 @@ h6 {
 # Global Header
 --------------------------------------------------------------*/
 .header {
-  --background-color: #0e131c;
+  --background-color: #fff;
   color: var(--default-color);
   transition: all 0.5s;
   z-index: 997;
@@ -154,7 +147,7 @@ h6 {
 }
 
 .header .topbar {
-  background-color: #C69F71;
+  background-color: #000;
   height: 40px;
   padding: 0;
   font-size: 14px;
@@ -254,7 +247,7 @@ h6 {
 
   .navmenu a,
   .navmenu a:focus {
-    color: #C69F71;
+    color: #000;
     padding: 18px 15px;
     font-size: 16px;
     font-family: var(--nav-font);
@@ -281,7 +274,7 @@ h6 {
   .navmenu li:hover>a,
   .navmenu .active,
   .navmenu .active:focus {
-    color: #C69F71;
+    color: #000;
   }
 
   .navmenu .dropdown ul {
@@ -487,7 +480,7 @@ h6 {
 
 /* Pill-shaped Get A Quote button – Desktop */
 .get-quote-btn {
-  background-color: #C69F71;
+  background-color: #000;
   color: #fff;
   font-weight: 600;
   font-size: 15px;
@@ -500,14 +493,15 @@ h6 {
 }
 
 .get-quote-btn:hover {
-  background-color: #d4b08a;
+  background-color: rgba(0, 0, 0, 0.7);
   transform: translateY(-2px);
-  box-shadow: 0 8px 15px rgba(198, 159, 113, 0.3);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  color: #fff;
 }
 
 /* Optional: Mobile version of the button (appears below logo when menu is closed) */
 .get-quote-btn-mobile {
-  background-color: #C69F71;
+  background-color: #000;
   color: #fff;
   font-size: 14px;
   padding: 8px 20px;
@@ -531,7 +525,7 @@ h6 {
 --------------------------------------------------------------*/
 .footer {
   color: var(--default-color);
-  background-color: #0e131c;
+  background-color: #000;
   font-size: 14px;
   padding-bottom: 50px;
   position: relative;
@@ -796,6 +790,7 @@ section,
   letter-spacing: 0.5px;
   text-transform: uppercase;
   position: relative;
+  color: #000;
 }
 
 .section-title h2::after {
@@ -833,7 +828,7 @@ section,
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("../img/construction/SSygDJmMSlifQT5ESfUwYA.webp");
+  background-image: url("../img/construction/wallpaperflare.com_wallpaper.jpg");
   background-size: cover;
   background-position: center center;
   opacity: 1;
@@ -888,7 +883,7 @@ section,
   top: 50%;
   width: 15px;
   height: 2px;
-  background-color: var(--accent-color);
+  background-color: #000;
   transform: translateY(-50%);
 }
 
@@ -946,7 +941,7 @@ section,
 .hero .hero-buttons .btn-primary {
   display: inline-block;
   padding: 14px 32px;
-  background-color: var(--accent-color);
+  background-color: #000;
   color: var(--contrast-color);
   border-radius: 4px;
   font-weight: 600;
@@ -955,7 +950,7 @@ section,
 }
 
 .hero .hero-buttons .btn-primary:hover {
-  background-color: color-mix(in srgb, var(--accent-color), black 15%);
+  background-color: rgba(0, 0, 0, 0.8);
   transform: translateY(-3px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
@@ -1081,6 +1076,7 @@ section,
   font-weight: 700;
   margin-bottom: 1.5rem;
   position: relative;
+  color: #000;
 }
 
 .about .about-content h2:after {
@@ -1096,7 +1092,7 @@ section,
 .about .about-content .lead {
   font-size: 1.15rem;
   margin-bottom: 1.5rem;
-  color: color-mix(in srgb, var(--heading-color), transparent 10%);
+  color: #000;
 }
 
 .about .about-content p {
