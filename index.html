@@ -36,14 +36,14 @@
   <div class="topbar d-flex align-items-center dark-background">
     <div class="container d-flex justify-content-center justify-content-md-between">
       <div class="contact-info d-flex align-items-center">
-        <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:contact@example.com">almasarinterior@gmail.com</a></i>
+        <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:contact@example.com">info@almasarinterior.com</a></i>
         <i class="bi bi-phone d-flex align-items-center ms-4"><span>+971 555 968 545</span></i>
       </div>
       <div class="social-links d-none d-md-flex align-items-center">
-        <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
+        <a href="https://wa.me/971552916156" class="twitter"><i class="bi bi-whatsapp"></i></a>
         <a href="https://www.facebook.com/Almasar.interior" class="facebook"><i class="bi bi-facebook"></i></a>
         <a href="https://www.instagram.com/almasar_interior/" class="instagram"><i class="bi bi-instagram"></i></a>
-        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+        <a href="https://www.linkedin.com/in/almasar-interior-2b658a3a3" class="linkedin"><i class="bi bi-linkedin"></i></a>
       </div>
     </div>
   </div><!-- End Top Bar -->
@@ -90,7 +90,7 @@
 
               <div class="hero-buttons">
                 <a href="#call-to-action" class="btn-primary">Get a Quote</a>
-                <a href="#projects" class="btn-secondary">Our Projects</a>
+                <a href="#gallery" class="btn-secondary">Our Projects</a>
               </div>
 
               
@@ -171,7 +171,7 @@
 
           <div class="col-lg-6">
             <div class="about-image position-relative" data-aos="fade-left" data-aos-delay="200">
-              <img src="assets/img/gallery/about-img-2.jpg" alt="Construction Team" class="img-fluid main-image rounded">
+              <img src="assets/img/construction/2d297f22-493b-4072-891d-6a785fb7ff6c.png" alt="Construction Team" class="img-fluid main-image rounded">
               <div class="image-overlay">
                 <img src="assets/img/projects/2.png" alt="Construction Project" class="img-fluid rounded">
               </div>
@@ -294,7 +294,7 @@
           <div class="service-features">
             <span><i class="bi bi-check-circle"></i> All Paint Quality Levels</span>
             <span><i class="bi bi-check-circle"></i> Residential & Commercial</span>
-            <span><i class="bi bi-check-circle"></i> Clean & Even Finish</span>
+            <span><i class="bi bi-check-circle"></i> Texture, Spray and Wall Paints</span>
           </div>
         </div>
       </div>
@@ -305,7 +305,7 @@
     <div class="row mt-5">
       <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
         <div class="service-image-block">
-          <img src="assets/img/gallery/about-img-1.jpg" alt="Interior Services" class="img-fluid">
+          <img src="assets/img/construction/39276f6d-b599-46f1-ae6c-72a20521f4f3.png" alt="Interior Services" class="img-fluid">
         </div>
       </div>
 
@@ -355,7 +355,7 @@
     <div class="cta-container text-center mt-5" data-aos="fade-up" data-aos-delay="100">
       <h3>Build Better Interiors With AlMasar</h3>
       <p>From ceilings to finishes, we deliver reliable interior solutions with precision and care.</p>
-      <a href="#" class="btn btn-cta">Start Your Project</a>
+      <a href="get-a-quote.html" class="btn btn-cta">Start Your Project</a>
     </div>
 
   </div>
@@ -856,7 +856,14 @@
                   <p>Get started with your next construction project today</p>
                 </div>
 
-                <form action="forms/get-a-quote.php" method="post" class="php-email-form">
+                <form action="https://api.web3forms.com/submit" method="post" class="php-email-form">
+
+                  <!-- REQUIRED: Your Web3Forms API Key -->
+                  <input type="hidden" name="access_key" value="080803a8-94c7-4f6e-ac24-f6a7e3af6ba1">
+
+                  <!-- Email you want submissions delivered to -->
+                  <input type="hidden" name="from_name" value="Al Masar Interior">
+                  <input type="hidden" name="replyto" value="almasarinterior@gmail.com">
                   <div class="row g-3">
                     <div class="col-md-6">
                       <div class="form-group">
@@ -1053,13 +1060,14 @@
                 <i class="bi bi-envelope"></i>
               </div>
               <div class="contact-info">
-                <a href="mailto:almasarinterior@gmail.com"><p>almasarinterior@gmail.com</p></a> 
+                <a href="mailto:info@almasarinterior.com"><p>info@almasarinterior.com</p></a> 
               </div>
             </div>
 
             <div class="social-links">
               <a href="https://www.facebook.com/Almasar.interior"><i class="bi bi-facebook"></i></a>
               <a href="https://www.instagram.com/almasar_interior/"><i class="bi bi-instagram"></i></a>
+              <a href="https://www.linkedin.com/in/almasar-interior-2b658a3a3"><i class="bi bi-linkedin"></i></a>
             </div>
           </div>
         </div>
@@ -1091,7 +1099,7 @@
 
   <!-- Scroll Top -->
   <a href="https://wa.me/971552916156" class="scroll-top d-flex align-items-center justify-content-center" target="_blank">
-    <img src="assets/img/whatsapp.png">
+    <img src="assets/img/whatsapp.png" alt="WhatsApp">
   </a>
 
   <!-- Preloader -->
