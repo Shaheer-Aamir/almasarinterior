@@ -258,7 +258,18 @@
 
             <div class="newsletter-form">
               <h5>Stay Updated</h5>
-              <form action="forms/newsletter.php" method="post" class="php-email-form">
+              <form action="https://api.web3forms.com/submit" method="post" class="php-email-form"><!-- REQUIRED: Your Web3Forms API Key -->
+                  <input type="hidden" name="access_key" value="080803a8-94c7-4f6e-ac24-f6a7e3af6ba1">
+
+                  <!-- Email you want submissions delivered to -->
+                  <input type="hidden" name="from_name" value="Al Masar Interior">
+                  <input type="hidden" name="replyto" value="almasarinterior@gmail.com">
+                <!-- REQUIRED: Your Web3Forms API Key -->
+                  <input type="hidden" name="access_key" value="080803a8-94c7-4f6e-ac24-f6a7e3af6ba1">
+
+                  <!-- Email you want submissions delivered to -->
+                  <input type="hidden" name="from_name" value="Al Masar Interior">
+                  <input type="hidden" name="replyto" value="almasarinterior@gmail.com">
                 <div class="input-group">
                   <input type="email" name="email" class="form-control" placeholder="Enter your email" required="">
                   <button type="submit" class="btn-subscribe">
